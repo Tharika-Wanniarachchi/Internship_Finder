@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+{% load static %}
+
+    <div class="log_body" style="background-image:linear-gradient(to left,#b518b53c, #e9c3031d);">
+        <form action="" class="log_form p-5"style="background-image:linear-gradient(to left,#b518b580, #e9c3037a);">
+            <h1 class="log_h1">Login</h1>
+
+            <div class="both">
+                <div class="log_label">
+                    <label for="username">Username</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="">
+                    <input type="text" class="log_input" name="username" id="username" placeholder="Enter your username">
+                </div>
+            </div>
+
+            <div class="both">
+                <div class="log_label">
+                    <label for="password">Password</label>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="">
+                    <input type="password"  class="log_input"name="password" id="password" placeholder="Enter your password">
+                </div>
+
+                <button type="submit" class="log_button"><a href="/" style="text-decoration: none; color:white;">Login</a></button>
+            </div>
+
+            <div class="log_link">
+                <a href="/forget_password/">Forgot Password</a>
+                <br><br>
+                <a href="/registration/">Register Now</a>
+            </div>
+
+        </form>
+    </div>
+    
+    
+{% endblock %}
