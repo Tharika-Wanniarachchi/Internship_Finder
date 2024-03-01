@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+{% load static %}
+    
+   <!-- banner section start -->
+
+   <div class="d-flex justify-content-end header-banner" style="background-image: url('{{ company.banner.url }}')">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#"><img src="{% static 'facebook.png' %}"  height="30px" class="justify-content-end" ></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><img src="{% static 'instagram.png' %}"  height="30px"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><img src="{% static 'twitter-sign.png' %}" height="30px"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><img src="{% static 'linkedin-logo.png' %}" height="30px"></a>
+        </li>
+    </ul> 
+</div>
+
+<!-- banner section end -->
+
+               
+    
+
+<!-- category vacancies section start -->
+
+<div class="container">
+    <div class="title-section">
+        <div class="row">
+            <div class="col-3 cm-title" >
+                <center>
+                    <!-- Use the logo_url passed from the view -->
+                    <img src="{{ company.logo.url }}"  alt="Logo" class="logo">
+                    <h3>{{ company.name }}</h3> <!-- Display the company's name -->
+                    <p>{{ company.city }} , {{ company.country }}</p>
+                    <p>{{ company.email }}</p>
+                    <p>{{ company.mobileNumber }}</p>
+                </center>  
+            </div>
+            <div class="col-6 cm-description">
+                <p class="text-justify">{{ company.description }}</p> <!-- Display the company's description -->
+            </div>
+            <div class="col-3 cm-link">
+                <a href="/vacancy/" class="link"><h4 class="text-end">VACANCY<i class="fa fa-chevron-right"  aria-hidden="true"></i><i class="fa fa-chevron-right" aria-hidden="true"></i></h4></a>
+            </div>
+        </div>
+    </div>
+</div>
+       
+<div class="divider">
+    <hr>
+</div>
+
+<div class="container">
+    <div class="card w-75 mb-3 card-style">
+        <div class="card-body">
+          <h4 class="card-title mt-3 mb-3"><u><i class="fa fa-circle p-2 " aria-hidden="true" style="font-size: 10px;"></i>Category | Vacancy Name</u></h4>
+          <p class="card-text px-5">This is Paragraph shows the give description of the company
+            whe yor are registered.This Paragraph shows the given 
+            description of the company when you are registerd.This 
+            Paragraph show the given description of the company when you
+            are registered.</p>
+          <a href="#" class="btn btn-style mx-5">See More<i class="fa fa-chevron-right" style="padding-left: 10px;" aria-hidden="true"></i><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <div class="card w-75 mb-3 card-style">
+        <div class="card-body">
+          <h4 class="card-title mt-3 mb-3"><u><i class="fa fa-circle p-2 " aria-hidden="true" style="font-size: 10px;"></i>Category | Vacancy Name</u></h4>
+          <p class="card-text px-5">This is Paragraph shows the give description of the company
+            whe yor are registered.This Paragraph shows the given 
+            description of the company when you are registerd.This 
+            Paragraph show the given description of the company when you
+            are registered.</p>
+          <a href="#" class="btn btn-style mx-5">See More<i class="fa fa-chevron-right" style="padding-left: 10px;" aria-hidden="true"></i><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <div class="card w-75 mb-3 card-style">
+        <div class="card-body">
+          <h4 class="card-title mt-3 mb-3"><u><i class="fa fa-circle p-2 " aria-hidden="true" style="font-size: 10px;"></i>Category | Vacancy Name</u></h4>
+          <p class="card-text px-5">This is Paragraph shows the give description of the company
+            whe yor are registered.This Paragraph shows the given 
+            description of the company when you are registerd.This 
+            Paragraph show the given description of the company when you
+            are registered.</p>
+          <a href="#" class="btn btn-style mx-5">See More<i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+    </div> 
+    <a href="/category/" class="link"><h4 class="text-end">SEE MORE<i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-right"style="padding-right: 30px;" aria-hidden="true"></i></h4></a>
+</div>
+<div class="divider">
+    <hr>
+</div>
+
+{% endblock %}
