@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+{% load static %}
+
+<div class="log_body" style="background-image:linear-gradient(to left,#b518b53c, #e9c3031d);">
+    <form action="" class="log_form py-3 px-5 mt-5 mb-5"style="background-image:linear-gradient(to left,#b518b580, #e9c3037a);">
+        
+        <h1 class="log_h1">Vacancies</h1>
+
+
+        <div class="mb-3">
+            <label class="log_lable"for="category">Category:</label>
+            <select id="select the category" name="select the category" class="log_input">
+                <option value="software developer">software developer</option>
+                <option value="business analysis">business analysis</option>
+                <option value="frontend developer">frontend developer</option>
+                <option value="backend developer">backend developer</option>
+                <option value="fullstack developer">fullstack developer</option>
+                <option value="network administrater">network administrater</option>
+                <option value="game developer">game developer</option>  
+            </select>
+        </div>
+
+        
+        <div class="mb-3">
+            <label class="log_lable"for="vacancy_name">Vacancy Name:</label>
+            <input type="vacancy_name" id="vacancy_name"  class="log_input" name="vacancy_name" required>
+        </div>
+        <div class="mb-3">
+            <label class="log_lable"for="description">Description:</label>
+            <textarea id="description" class="log_input" name="description"  required></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="log_lable" for="requirements">Requirements:</label>
+            <textarea id="requirements" class="log_input" name="requirements"  required></textarea>
+        </div>
+        <div class="mb-3">
+            <button type="submit" >Save</button>
+        </div>
+        
+        <div class="mb-3 ">
+            <button type="submit" >+ Add New</button>
+            <button type="submit" style="float:right;" >Register</button>
+        </div>
+    </form>
+</div>
+<script>
+    function reloadForm() {
+        document.getElementById("contactForm").reset(); // Reset the form
+    }
+</script>
+
+{% endblock %}
