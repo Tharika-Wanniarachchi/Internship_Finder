@@ -1,0 +1,549 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Header Banner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+  <!-- link font awosome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+/****************** Company page styles***************************/
+
+    
+     .header-banner {
+        
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        padding-right: 30px;
+    }
+
+    .logo {
+        width: 200px; 
+        height: auto;
+        border-radius: 50%;
+        margin-top: -250px;
+    }
+    .nav{
+        margin-top: 140px;
+    }
+    .cm-title{
+        padding-top: 110px;    
+    }
+    .cm-title h3{
+        font-weight: 600;
+        font-family: poppins;
+        color:#800080;
+    }
+    .cm-description{
+        padding-top: 30px;
+        font-size:large;
+        padding-left: 100px;
+        
+    }
+    .cm-link{
+        margin-top: 20%;
+    }
+    .link{
+        text-decoration: none;
+        color:#800080;
+    }
+   
+    .link:hover{
+        color:#ffd700 ;
+    }
+    .link h4{
+        font-weight: 700;
+    }
+    .card-style{
+        border: none;
+    }
+    .card-style h4{
+        font-weight: 600;
+    }
+    
+    .btn-style{
+        background: #800080;
+        color: #ffd700;
+        font-weight: 600;
+    }
+    .btn-style:hover{
+        background: #ffd700;
+        color: #800080;
+        font-weight: 600;
+    }
+
+    .topic{
+        font-weight: 600;
+        font-family: poppins;
+        color:#800080;
+    }
+
+    .crd{
+        margin: 0 auto;
+    }
+
+/****************** Login/vacancy/forget_password/contact/vacancy page styles***************************/
+
+.log_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+      
+}
+
+.log_form {
+    width: 40%; 
+    color: #800080; 
+    border: 2px solid #800080;
+    padding: 20px;
+    border-radius: 10px; 
+    background-color: whitesmoke;
+}
+
+.log_h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #800080;
+    font-weight: 600;
+}
+
+
+.log_input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    padding-left:15px; 
+    padding-right:15px; 
+    border: 2px solid #800080; 
+    border-radius: 20px; 
+    color: #800080;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgb(232, 240, 253);
+}
+
+.log_label {
+    display: flex;
+    align-items: center;
+    color: #800080;
+    margin-top: 20px; 
+    margin-bottom: 7px; 
+}
+
+.log_label i {
+    margin-right: 10px;
+    color: #800080; 
+}
+
+
+.log_button {
+    height: 40px;
+    padding: 4px; 
+    margin-top: 16px;
+    border: 2px solid #800080;
+    background-color: #800080;
+    color: white;
+    border-radius: 10px;     
+}
+
+.log_button:hover {
+    cursor: pointer; 
+}
+
+
+.log_link {
+    text-align: center;
+    margin-top: 10px;
+    margin: 5px; 
+}
+
+.log_link a {
+    color: #800080; 
+    text-decoration: none;
+    
+}
+
+.log_link a:hover {
+    text-decoration: underline; 
+}
+
+.log_body input[type="text"], .log_body textarea, .log_body input[type="file"],.log_body input[type="email"]{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    padding-left:15px; 
+    padding-right:15px; 
+    border: 2px solid #800080; 
+    border-radius: 20px; 
+    color: #800080;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgb(232, 240, 253);
+}
+
+      /****************** Registration page styles***************************/
+  .registration_form {
+    width: 800px;  
+    color: #800080; 
+    border: 2px solid #800080;
+    padding: 20px;
+    border-radius: 10px; 
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: whitesmoke;
+    margin-left: 20%;
+}
+
+.form-floating .form-control {
+    border:2px solid #800080;
+}
+
+.mb-3 .form-control {
+    border:2px solid #800080;
+}
+
+.mb-3 h3 {
+    color: #360136;
+    margin-top: 50px;
+}
+
+.mb-3 h1 {
+    font-size: 36px;
+    text-align: center;
+    color:#800080;
+    font-family: roboto;
+    font-weight: 700;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #800080;
+    margin-top: 20px; 
+    margin-bottom: 7px; 
+}
+
+.mb-3 button {
+    width: 25%;
+    color: #ffffff;
+    background-color: #800080;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 5px 15px 5px 15px;
+    border: 2px solid #800080;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.mb-3 button:hover {
+    cursor: pointer; 
+    background-color: #990099;
+}
+
+
+/****************** index/category page styles***************************/
+
+.slider {
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider-image {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    object-position: center;
+}
+   
+
+  .side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+  }
+
+/****************** base and navbar styles***************************/
+*{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: sans-serif;
+    }
+    #nav-bar {
+        top: 0;
+         
+        
+    }
+    .navbar{
+        background-image:linear-gradient(to left,#b518b5, #e9c203c8);
+        height: auto;
+        padding-left: 50px;
+        padding-right: 50px;
+         
+    } 
+    .navbar-nav{
+        padding-left: 70px;
+        padding-right: 70px;
+         
+    }
+    
+    .navbar-nav li{
+        padding:0 20px;
+        font-size:larger;   
+    }
+    .navbar-nav a{
+        color: #2a2727 !important;
+        font-weight: 500;
+        font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    h4{
+        color: #540254!important;
+    }
+
+ /****************** footer styles***************************/
+
+
+ .footer-box p{
+    height: auto;
+    width: auto;
+    padding: 20px;
+    max-width: max-content;
+    text-align: justify;
+}
+
+.footer-img{
+    height :100px;
+    padding-left: 0px;
+     
+}
+ 
+
+#footer{
+    background-image:linear-gradient(to left,#750a75, #5a4f18c8);  
+}
+
+
+
+/****************** About page styles***************************/
+.checked {
+    color: orange;
+  }
+
+  
+  .fa {
+    font-size: 25px;
+  }
+  
+  .checked {
+    color: orange;
+  }
+  
+  .middle {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+  }
+  
+
+  .right {
+    text-align: right;
+  }
+  
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .heading {
+    font-size: 25px;
+    margin-right: 25px;
+  }
+
+
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+  }
+  
+
+  .bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+  .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+  .bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+  .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+  .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+  
+ 
+  @media (max-width: 400px) {
+    .side, .middle {
+      width: 100%;
+    }
+   
+    .right {
+      display: none;
+    }
+  }
+
+
+
+
+
+
+
+
+    
+
+  </style>
+</head>
+<body>
+
+
+  </style>
+</head>
+<body>
+
+        
+    <!-- Top Nav Bar -->
+    {% load static %}
+
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+           <div class="container-fluid">
+                <a class="navbar-brand img" href="/"> 
+                    <img src="{% static 'findi_logo.png' %}" alt="Findi Logo" height="60px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+             </button>
+    
+             <!-- Top Nav Bar Search Option-->
+    
+           <div>
+               <form class="d-flex" role="search">
+               <input type="text" class="form-control" placeholder="Search..." aria-label="Search..."
+               aria-describedby="inputGroup-sizing-sm" style="border-radius: 20px; max-height: 35px; padding-left: 20px;  width: 370px;" id="search">
+               <button class="btn btn-secondary" style="padding-right: 10px;" type="submit">Search</button>
+               </form>
+           </div>
+    
+           <!-- nav bar buttons -->
+           
+             <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav">
+                   <li class="nav-item">
+                       <a class="nav-link " href="/" onclick="loadHome()"> Home </a>
+                   </li>
+    
+                   <li class="nav-item">
+                       <a class="nav-link " href="/about/" onclick="loadAbout()">About</a>
+                   </li>
+    
+                   <li class="nav-item">
+                       <a class="nav-link " href="/category/" onclick="loadCategori()">Category</a>
+                   </li>
+    
+                   <li class="nav-item">
+                       <a class="nav-link " href="/contact/" onclick="loadCompany()">Contact</a>
+                   </li>
+    
+                      <!-- Top Nav Bar Profile Icon Dropdown-->
+    
+                       <div class="dropdown-center">
+                           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               <a href="/login/" style="text-decoration: none;"></a> <i class="fa fa-user" aria-hidden="true"></i>
+                           </button>
+                           <ul class="dropdown-menu">
+                             <li><a class="dropdown-item" href="/login/"  onclick="loadProfile()">Profile</a></li>
+                             <li><a class="dropdown-item" href="/">Logout</a></li>
+                              
+                           </ul>
+                       </div>
+    
+                
+               </ul>
+             </div>
+           </div>
+       </nav>
+       </section>  
+    
+       <!-- top nav bar end -->
+    {% block start %}
+    
+    {% endblock  %}
+<!-- page footer start -->
+<section id="footer"  >
+    <div class="container-fluid">
+            <div class="row">
+                <!-- first footer row -->
+
+                <div class="col-md-4  footer-box"   >
+                    <a class="navbar-brand img" href="#"> <img src="{% static 'Python_Logo.png'%}" class="footer-img"  height="100px"></a>
+                </div>
+                
+                <!-- second footer row -->
+                <div class="col-md-4  footer-box">
+                    <p style="color: rgb(216, 230, 241);">  "Find I" is a web application designed to streamline the internship search process 
+                        by connecting students and companies in a centralized platform. This platform  
+                         allows students to register their profiles and enables companies to post  
+                         internship vacancies.   </p>
+                </div>
+                
+                <!-- Third footer row -->
+                <div class="col-md-4  footer-box"  style="padding-top: 40px;  padding-left: 100px;">
+                    <a href="/registration/"><button type="button" class="btn btn-dark"  onclick="loadRegister()"  >Register Now</button></a>
+                    <div class="row"  style="padding-top: 50px;">
+                         <section id="social-media">
+                            <a href="#"><img src="{% static 'facebook.png' %}"  height="35px" style="padding-left: 10px;"  ></a>
+                            <a href="#"><img src="{% static 'instagram.png' %}" height="35px" style="padding-left: 10px;"></a>
+                            <a href="#"><img src="{% static 'twitter-sign.png' %}" height="35px" style="padding-left: 10px;"></a>
+                            <a href="#"><img src="{% static 'linkedin-logo.png' %}" height="35px" style="padding-left: 10px;"></a> 
+                             
+                         </section>
+                    </div>
+                    
+                    </div>
+                    <p class="text-center mt-5">&copy; 2024 Find I. All rights reserved.</p>
+
+                </div>
+                
+            </div>
+
+
+    </div>
+             
+
+     
+</section>
+
+<!-- page footer end -->
+    
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+{% load static %}
+
+<div style="background-image:linear-gradient(to left,#b518b53c, #e9c3031d);">
+
+<div class="container log_body p-3 " style="width: 50%;">
+  <div class="card shadow-lg" style="background-image:linear-gradient(to left,#b518b569, #e9c3035f);">
+    <div class=" mx-auto px-5 py-3">
+      <center><h1 style="color:#570357; font-family:poppins;" class="mb-3">Contact Us</h1></center>
+      <p>If you have any questions or feedback, feel free to get in touch with us. We're here to help!</p>
+      <ul  style="color:#570357; font-weight:600">
+        <li>Email: info@findi.com</li>
+        <li>Phone: +1 123 456 7890</li>
+        <li>Address: 123 Street Name, City, Country</li>
+      </ul>
+      <p>Alternatively, you can fill out the form below:</p>
+      <form>
+        <div class="form-group">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label">Message:</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn log_button" style="width: 100px;">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+{% load static %}
+
+<div class="log_body" style="background-image:linear-gradient(to left,#b518b53c, #e9c3031d);">
+    <div class="container">
+        <form action="" method="post" enctype="multipart/form-data"  class="registration_form" style="background-image:linear-gradient(to left,#b518b580, #e9c3037a);">
+            {% csrf_token %}
+            <div class="mb-3">
+                <h1>Company Registration</h1>
+            </div>
+            <div class="mb-3">
+                <label for="id_companyNameInput" class="form-label">Company Name</label>
+                {{ form.name }}
+            </div>
+            <div class="mb-3">
+                <label for="id_companyDescriptionInput" class="form-label">Company Description</label>
+                {{ form.description }}
+            </div>
+            <div class="mb-3">
+                <label for="id_logoInput" class="form-label">Company Logo</label>
+                {{ form.logo }}
+            </div>
+            <div class="mb-3">
+                <label for="id_bannerInput" class="form-label">Company Banner</label>
+                {{ form.banner }}
+            </div>
+            <div class="mb-3">
+                <label for="id_cityInput" class="form-label">City</label>
+                {{ form.city }}
+            </div>
+            <div class="mb-3">
+                <label for="id_countryInput" class="form-label">Country</label>
+                {{ form.country }}            
+            </div>
+            <div class="mb-3">
+                <label for="id_emailInput" class="form-label">Email</label>
+                {{ form.email }}            
+            </div>
+            <div class="mb-3">
+                <label for="id_mobileNumberInput" class="form-label">Mobile Number</label>
+                {{ form.mobileNumber }}            
+            </div>
+            <input type="submit" value="Register" class="btn btn log_button"style="width: 150px;">
+
+        </form>
+    </div>
+</div>
+
+
+
+  
+{% endblock %}
